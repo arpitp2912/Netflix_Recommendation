@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  
+  <div class="body">
+  <h1>Netflix Movie Recommendation<br /> <link rel="stylesheet" href="/static/style.css" /></h1>
+  <div class="wrapper">
+    <link rel="stylesheet" href="/static/style.css" />
+    <form action="predict" method="post">
+    <input name="movie" class="search" type="text" id="movie" placeholder="Movie name here" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <!-- <input class="submit" type="submit" value="Submit" /> -->
+    <button class="submit" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  </form>
+    <link rel="stylesheet" href="/static/style.css" />
+  </div>
+
+  <h2>Click Submit to get recommendations <link rel="stylesheet" href="/static/style.css" /></h2>
+
+<br>
+<br>
+
+<style>
+table {
+  width:60%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #00c6ff;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #00c6ff;
+}
+table#t01 th {
+  background-color: #00c6ff ;
+  color: white;
+}
+</style>
+
+<table id="t01">
+<table align="center">
+  <tr>
+    <th>Top 5 Similar Movies to '{{ input_movie }}'</th>
+    
+  </tr>
+  <tr>
+    <td>{{ movies[0] }}</td>
+    
+  </tr>
+  <tr>
+    <td>{{ movies[1] }}</td>
+    
+  </tr>
+  <tr>
+    <td>{{ movies[2] }}</td>
+    
+  </tr>
+  <tr>
+    <td>{{ movies[3] }}</td>
+    
+  </tr>
+  <tr>
+    <td>{{ movies[4] }}</td>
+    
+  </tr>
+</table>
+</table>
+
+
+</head>
+</html>
+
