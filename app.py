@@ -51,10 +51,15 @@ def recommend(movie_user_likes):
                 break
         return recommended_movies
     except:
-        return('Movie not found on Netflix. Please retry!')
+        # return('Movie not found on Netflix. Please retry!')
+        return None
 
 
 app = Flask(__name__)
+
+@app.route('/')
+def root():
+    return render_template('home.html')
 
 
 @app.route('/home')
@@ -68,8 +73,10 @@ def predict():
 	if request.method == 'POST':
 		input_movie = request.form.get('movie')
 	movies = recommend(input_movie)
-
-	return render_template('output.html',movies=movies, input_movie = input_movie.title())
+	if movies is not None:
+		return render_template('output.html',movies=movies, input_movie = input_movie.title())
+	else:
+		return render_template('error.html')
 
 
 if __name__ == '__main__':

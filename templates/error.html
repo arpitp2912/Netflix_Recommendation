@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html >
-
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,27 +23,30 @@
 
   <form action="https://netflix-recommendation.herokuapp.com/home">
   <button class="btn"><i class="fa fa-home"></i> Home</button>
-  </form>  
+  </form>
 
-  
+    
   <div class="body">
-
-  <h1>Netflix Movie Recommendation<br /> <link rel="stylesheet" href="static/style.css" /></h1>
+  <h1>Netflix Movie Recommendation<br /> <link rel="stylesheet" href="/static/style.css" /></h1>
   <div class="wrapper">
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="/static/style.css" />
     <form action="predict" method="post">
     <input name="movie" class="search" type="text" id="movie" placeholder="Movie name here" />
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="/static/style.css" />
     <!-- <input class="submit" type="submit" value="Submit" /> -->
     <button class="submit" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
   </form>
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="/static/style.css" />
   </div>
 
-  <h2>Click Submit to get recommendations <link rel="stylesheet" href="static/style.css" /></h2>
+  <h2>Click Submit to get recommendations <link rel="stylesheet" href="/static/style.css" /></h2>
 
 <br>
 <br>
+
+<h3>Movie not found. Please retry! <link rel="stylesheet" href="/static/style.css" /></h3>
+</div>
+
 
 
 </head>
